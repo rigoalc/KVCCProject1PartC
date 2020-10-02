@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <title>Project 1 Part A</title>
+        </head>
+<!--
+ Part C – (50 Points) - Create a web page that will use JavaScript to prompt the user for whole number.On separate lines, 
+ display the following in a paragraph on the web page.
+
+The original number in a red normal font.
+The square of the original number in a green italic font.
+The square root of the original number in a blue bold font.
+
+-->
+
+<body>
+    <form>
+        <div>
+            Please enter a value to calculate: <input type="number" id="userInput">
+            <br>
+            <button type="button" onclick="calcSqrandSqrRot();">Calc Tangent and Cosine</button>
+            <p id="outputPara">&nbsp;</p>
+            
+        </div>
+    </form>
+<script>
+function calcSqrandSqrRot(){
+    // this function will calculate the tangent and cosine of a value
+    // get the value from the user
+    var x = document.getElementById('userInput').value;
+    // calculate and round the Square
+    var SqrX = Math.pow(x, 2); 
+         
+         if (!Number.isInteger(SqrX)) {
+            SqrX = Math.round(SqrX);
+        }
+        // calculate and round the Square Root
+    var SqrotX = Math.sqrt(x);  
+        
+        if (!Number.isInteger(SqrotX)) {
+            SqrotX = Math.round(SqrotX);
+        }
+    var msg = "With a initial value of <span style =\"color:purple;\">";
+    msg += x + "</span>,<br>";
+    msg +=  "you get a square of <span style=\"color:green;italic;\"><strong>" + SqrX;
+    msg +=  "</strong></span>,<br>";
+    msg +=  "and a square root of <span style=\"color:blue;bold;\"><em>" + SqrotX;
+    msg += "</em></span><br>";
+    document.getElementById('outputPara').innerHTML = msg;
+}
+</script>  
+</body>
+</html>
