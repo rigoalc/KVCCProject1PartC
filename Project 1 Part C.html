@@ -4,21 +4,18 @@
         <title>Project 1 Part A</title>
         </head>
 <!--
- Part C – (50 Points) - Create a web page that will use JavaScript to prompt the user for whole number.On separate lines, 
- display the following in a paragraph on the web page.
-
+Part C – (50 Points) - Create a web page that will use JavaScript to prompt the user for whole number.On separate lines, 
+display the following in a paragraph on the web page.
 The original number in a red normal font.
 The square of the original number in a green italic font.
 The square root of the original number in a blue bold font.
-
 -->
-
 <body>
     <form>
         <div>
             Please enter a value to calculate: <input type="number" id="userInput">
             <br>
-            <button type="button" onclick="calcSqrandSqrRot();">Calc Tangent and Cosine</button>
+            <button type="button" onclick="calcSqrandSqrRot();">Calc Square and Square Root</button>
             <p id="outputPara">&nbsp;</p>
             
         </div>
@@ -36,7 +33,6 @@ function calcSqrandSqrRot(){
         }
         // calculate and round the Square Root
     var SqrotX = Math.sqrt(x);  
-        
         if (!Number.isInteger(SqrotX)) {
             SqrotX = Math.round(SqrotX);
         }
